@@ -1,0 +1,24 @@
+{
+  "name": "pterodactyl-management-dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard for the pterodactyl game panel",
+  "main": "NULL",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upayanmazumder/pterodactyl-management-dashboard.git"
+  },
+  "keywords": [
+    "pterodactyl",
+    "dashboard",
+    "panel"
+  ],
+  "author": "upayanmazumder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/upayanmazumder/pterodactyl-management-dashboard/issues"
+  },
+  "homepage": "https://github.com/upayanmazumder/pterodactyl-management-dashboard#readme"
+}

@@ -14,6 +14,8 @@ export default component$(() => {
           <span class="highlight"> Sign in</span>
           <br /> with Github
           <SignUpForm />
+
+          <a href="/auth/signout">Sign out?</a>
         </h3>
       </div>
     </>

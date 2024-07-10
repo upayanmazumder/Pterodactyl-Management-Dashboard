@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { QwikLogo } from "../icons/qwik";
+import Session from "../../auth/session/session"
 import styles from "./header.module.css";
 
 export default component$(() => {
@@ -10,6 +11,7 @@ export default component$(() => {
           <a href="/" title="qwik">
             <QwikLogo height={50} width={143} />
           </a>
+          <Session/>
         </div>
         <ul>
           <li>

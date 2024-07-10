@@ -1,84 +1,83 @@
-/* session.module.css */
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1e3a8a, var(--primary-color));
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
 
-.branding {
-    display: flex;
+.wrapper:hover {
+  background: linear-gradient(135deg, var(--primary-color), #1e3a8a);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pfp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid #fff;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.email {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: row;
     align-items: center;
-    padding: 1rem;
-    background: linear-gradient(135deg, #1e3a8a, var(--primary-color));
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 0.8rem;
   }
-  
-  .branding:hover {
-    background: linear-gradient(135deg, var(--primary-color), #1e3a8a);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
+
   .pfp {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
-    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
   }
-  
-  .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
+
   .name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
   }
-  
+
   .email {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pfp {
+    width: 50px;
+    height: 50px;
+  }
+
+  .name {
     font-size: 1rem;
-    color: #d1d5db;
-    margin: 0;
-    transition: color 0.3s ease;
   }
-  
-  @media (max-width: 768px) {
-    .branding {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .pfp {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 1rem;
-    }
-  
-    .name {
-      font-size: 1.1rem;
-    }
-  
-    .email {
-      font-size: 0.9rem;
-    }
+
+  .email {
+    font-size: 0.85rem;
   }
-  
-  @media (max-width: 480px) {
-    .pfp {
-      width: 50px;
-      height: 50px;
-    }
-  
-    .name {
-      font-size: 1rem;
-    }
-  
-    .email {
-      font-size: 0.85rem;
-    }
-  }
-  
+}

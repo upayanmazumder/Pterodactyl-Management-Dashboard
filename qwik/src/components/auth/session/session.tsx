@@ -14,7 +14,7 @@ export default component$(() => {
   if (!session.value?.user) {
     return (
         <>
-          <a class={sessionstyles.branding} href="/auth/signin">Sign In!</a>
+          <a class={sessionstyles.wrapper} href="/auth/signin">Sign In!</a>
         </>
     );
   }
@@ -23,7 +23,7 @@ export default component$(() => {
   const imageUrl = session.value?.user?.image ?? '';
   return (
     <>
-        <div class={sessionstyles.branding}>
+        <div class={sessionstyles.wrapper}>
             <img class={sessionstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name  ?? 'User Icon'} />
             <div class={sessionstyles.details}>
                 <p class={sessionstyles.name}>{session.value?.user?.name}</p>

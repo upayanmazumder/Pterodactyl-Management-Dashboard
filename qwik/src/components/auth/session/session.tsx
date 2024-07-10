@@ -14,9 +14,7 @@ export default component$(() => {
   if (!session.value?.user) {
     return (
         <>
-            <div class={sessionstyles.branding}>
-                <a href="/auth/signin">Sign In!</a>
-            </div>
+          <a class={sessionstyles.branding} href="/auth/signin">Sign In!</a>
         </>
     );
   }
@@ -31,8 +29,8 @@ export default component$(() => {
                 <p class={sessionstyles.name}>{session.value?.user?.name}</p>
                 <p class={sessionstyles.email}>{session.value?.user?.email}</p>
                 <Form action={signOut}>
-                <input type="hidden" name="callbackUrl" value="/" />
-                <button class="button button-signout">Sign Out</button>
+                  <input type="hidden" name="callbackUrl" value="/" />
+                  <button class="button button-signout">Sign Out</button>
                 </Form>
             </div>
         </div>

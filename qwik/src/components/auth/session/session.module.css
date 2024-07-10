@@ -4,14 +4,14 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    background: linear-gradient(135deg, #1e3a8a, var(--primary-color));
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, box-shadow 0.3s ease;
   }
   
   .branding:hover {
-    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    background: linear-gradient(135deg, var(--primary-color), #1e3a8a);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   

@@ -1,5 +1,4 @@
 import { component$, useSignal, $ } from '@builder.io/qwik';
-import { BsHouse } from '@qwikest/icons/bootstrap';
 import navStyles from './nav.module.css';
 import menuData from '../../../data/nav.json';
 
@@ -19,7 +18,6 @@ const Navigation = component$(() => {
   return (
     <nav class={navStyles.navMenu}>
       <ul class={navStyles.mainMenu}>
-        <a href="/" class={navStyles.link}><BsHouse /> Home</a>
         {menuItems.map((item, index) => (
           <a
             key={index}

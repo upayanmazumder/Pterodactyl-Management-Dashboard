@@ -6,7 +6,7 @@ export default component$(() => {
   const signOut = useAuthSignout();
   return (
     <Form action={signOut}>
-      <input type="hidden" name="callbackUrl" value="/signedout" />
+      <input type="hidden" name="callbackUrl" value="/" />
       <button>Sign Out</button>
     </Form>
   );

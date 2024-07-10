@@ -142,6 +142,13 @@ button.button-small {
   padding: 15px 25px;
 }
 
+a.button.button-signout,
+button.button-signout {
+  padding: 0;
+  background-color: transparent;
+  color: var(--qwik-light-blue);
+}
+
 @media screen and (min-width: 768px) {
   a.button,
   button {

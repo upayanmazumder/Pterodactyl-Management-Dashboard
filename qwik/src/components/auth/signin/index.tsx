@@ -7,7 +7,7 @@ export default component$(() => {
   return (
     <Form action={signIn}>
       <input type="hidden" name="providerId" value="github" />
-      <input type="hidden" name="options.callbackUrl" value="https://pmd.upayan.space/" />
+      <input type="hidden" name="options.callbackUrl" value="http://localhost:5173/" />
       <button>Sign In</button>
     </Form>
   );

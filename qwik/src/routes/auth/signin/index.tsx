@@ -7,11 +7,10 @@ export default component$(() => {
     <>
 
       <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
 
       <div class="container container-center container-spacing-xl">
         <h3>
-          <span class="highlight"> Sign in</span>
+          Sign in
           <SignUpForm />
         </h3>
       </div>

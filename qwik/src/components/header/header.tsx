@@ -7,7 +7,7 @@ import headerstyles from "./header.module.css";
 export default component$(() => {
   return (
     <header class={headerstyles.header}>
-      <div class={["container", headerstyles.wrapper]}>
+      <div class={headerstyles.wrapper}>
           <Branding/>
           <NavigationMenu/>
           <Session/>

@@ -2,5 +2,10 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    gap: 15px;
+    gap: 25px;
+    background-color: rgba(71, 67, 67, 0.614);
+    padding: 20px 30px;
+    width: fit-content;
+    margin: 5px auto;
+    border-radius: 10px;
 }

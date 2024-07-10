@@ -19,6 +19,7 @@ export default component$(() => {
         <h3>
           You can <span class="highlight">count</span>
           <br /> on me
+          Added creds to cf deployment 
         </h3>
         <Counter />
       </div>

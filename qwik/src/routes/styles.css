@@ -149,6 +149,19 @@ button.button-signout {
   color: var(--qwik-light-blue);
 }
 
+a.button.button-auth,
+button.button-auth {
+  border-radius: 50%;
+  padding: 0;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  font-size: 30px;
+}
+
 @media screen and (min-width: 768px) {
   a.button,
   button {

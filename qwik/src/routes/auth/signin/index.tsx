@@ -12,7 +12,6 @@ export default component$(() => {
       <div class="container container-center container-spacing-xl">
         <h3>
           <span class="highlight"> Sign in</span>
-          <br /> with Github
           <SignUpForm />
         </h3>
       </div>

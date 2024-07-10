@@ -1,0 +1,31 @@
+.socialIcons {
+    display: flex;
+    gap: 10px;
+    background-color: hsla(0, 0%, 82%, 0.085);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.iconLink {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.iconLink:hover {
+    background-color: rgba(112, 112, 112, 0.7);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}

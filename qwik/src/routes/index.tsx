@@ -10,7 +10,6 @@ export default component$(() => {
       <Hero />
 
       <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
 
       <div class="container container-center container-spacing-xl">
         <h3>

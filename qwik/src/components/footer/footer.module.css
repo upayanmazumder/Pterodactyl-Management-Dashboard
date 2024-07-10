@@ -1,3 +1,9 @@
+footer {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
 .anchor {
   color: white !important;
   display: block;
@@ -9,6 +15,17 @@
 
 .anchor span:not(.spacer) {
   display: block;
+}
+
+.version {
+  font-size: smaller;
+  color: rgb(148, 148, 148);
+}
+
+.disclaimer {
+  color: rgb(145, 145, 145) !important;
+  font-size: small;
+  text-align: center;
 }
 
 .spacer {

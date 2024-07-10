@@ -14,7 +14,7 @@ export default component$(() => {
         <ul>
           <li>
             <a
-              href="/api/auth/signin"
+              href="/auth/signin"
             >
               Github SignIn
             </a>

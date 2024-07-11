@@ -22,17 +22,17 @@ export default component$(() => {
             <div class={signinstyles.wrapper}>
             <Form action={signIn}>
                 <input type="hidden" name="providerId" value="github" />
-                <input type="hidden" name="options.callbackUrl" value="/auth/signinsuccess"/>
+                <input type="hidden" name="options.callbackUrl" value="/auth/signedin"/>
                 <button class="button button-auth"><BsGithub/></button>
             </Form>
             <Form action={signIn}>
                 <input type="hidden" name="providerId" value="google" />
-                <input type="hidden" name="options.callbackUrl" value="/auth/signinsuccess"/>
+                <input type="hidden" name="options.callbackUrl" value="/auth/signedin"/>
                 <button class="button button-auth"><BsGoogle/></button>
             </Form>
             <Form action={signIn}>
                 <input type="hidden" name="providerId" value="discord" />
-                <input type="hidden" name="options.callbackUrl" value="/auth/signinsuccess"/>
+                <input type="hidden" name="options.callbackUrl" value="/auth/signedin"/>
                 <button class="button button-auth"><BsDiscord/></button>
             </Form>
             </div>
@@ -51,7 +51,7 @@ export default component$(() => {
                 <p class={signoutstyles.name}>{session.value?.user?.name}</p>
                 <p class={signoutstyles.email}>{session.value?.user?.email}</p>
                 <Form action={signOut}>
-                  <input type="hidden" name="callbackUrl" value="/auth/signoutsuccess" />
+                  <input type="hidden" name="callbackUrl" value="/auth/signedout" />
                   <button class="button button-signout">Sign Out</button>
                 </Form>
             </div>

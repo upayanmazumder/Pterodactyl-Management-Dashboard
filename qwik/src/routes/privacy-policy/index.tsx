@@ -19,7 +19,7 @@ export default component$(() => {
           </div>
           <>
             <p>
-              KSP Community is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website kspcommunity.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+              The Company is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website kspcommunity.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
             </p>
             <p>
               We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the "Last Updated" date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Site after the date such revised Privacy Policy is posted.
@@ -76,7 +76,7 @@ export default component$(() => {
           </div>
           <>
             <p>
-              You have the right to request access to the information we have on you. You can do this by contacting us at <a href="mailto:support@kspcommunity.com">support@kspcommunity.com</a>.
+              You have the right to request access to the information we have on you. You can do this by contacting us at <a href="mailto:support@company.com">support@company.com</a>.
             </p>
             <p>
               You have the right to request that we erase your data, under certain conditions.
@@ -93,7 +93,7 @@ export default component$(() => {
           </div>
           <>
             <p>
-              If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@kspcommunity.com">support@kspcommunity.com</a>
+              If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@company.com">support@company.com</a>
             </p>
           </>
         </Infobox>

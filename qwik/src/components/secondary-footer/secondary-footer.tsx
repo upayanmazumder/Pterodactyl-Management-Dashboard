@@ -1,26 +1,18 @@
 /* eslint-disable qwik/jsx-a */
 import { component$ } from "@builder.io/qwik";
 import styles from "./secondary-footer.module.css";
-import { LuPlane, LuFolderKanban, LuLayers } from "@qwikest/icons/lucide";
+import { LuBuilding, LuFolderKanban, LuLayers } from "@qwikest/icons/lucide";
 import Socials from "../socials/socials";
 
 export default component$(() => {
-
   return (
     <div class={styles.secondaryFooter}>
       {/*KSP-C Section */}
       <div class={styles.column}>
         <a class={styles.columnheading}>
-        <LuPlane /> KSP-C
+        <LuBuilding /> Company
         </a>
         <ul class={styles.columnlinks}>
-          <li>
-            <a
-              href="/about"
-              >
-              About us
-            </a>
-          </li>
           <li>
             <a
               href="/terms-of-service"
@@ -43,7 +35,7 @@ export default component$(() => {
             </a>
           </li>
           <li>
-            <a href="mailto:info@kspcommunity.com">
+            <a href="mailto:support@company.com">
               Contact us
             </a>
           </li>
@@ -58,18 +50,18 @@ export default component$(() => {
         <ul class={styles.columnlinks}>
           <li>
             <a
-              href="https://github.com/kspcommunity/Craft-File-Reader"
+              href="https://company.com/product1"
               target="_blank"
               >
-              Craft File Reader
+              Product 1
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/kspcommunity/Mod-Parts-Lister"
+              href="https://company.com/product2"
               target="_blank"
               >
-              Mod Parts Lister
+              Product 2
             </a>
           </li>
         </ul>
@@ -83,7 +75,7 @@ export default component$(() => {
         <ul class={styles.columnlinks}>
           <li>
             <a
-              href="https://status.kspcommunity.com"
+              href="https://status.company.com"
               target="_blank"
               >
               Status page
@@ -91,7 +83,7 @@ export default component$(() => {
           </li>
           <li>
             <a
-              href="https://github.com/kspcommunity/kspcommunity.com"
+              href="https://github.com/company/company.com"
               target="_blank"
               >
               Open Source
@@ -103,7 +95,6 @@ export default component$(() => {
       <div class={styles.column}>
         <Socials />
       </div>
-
     </div>
   );
 });

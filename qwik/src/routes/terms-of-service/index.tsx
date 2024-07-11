@@ -65,7 +65,7 @@ export default component$(() => {
           </div>
           <>
             <p>
-              If you have any questions about these Terms, please contact us at <a href="mailto:support@kspcommunity.com">support@kspcommunity.com</a>
+              If you have any questions about these Terms, please contact us at <a href="mailto:support@company.com">support@company.com</a>
             </p>
           </>
         </Infobox>

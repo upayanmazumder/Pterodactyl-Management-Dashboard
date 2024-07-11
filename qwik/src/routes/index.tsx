@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 
 import Hero from "../components/hero/hero";
 import Infobox from "../components/infobox/infobox";
+import SecondaryFooter from "../components/secondary-footer/secondary-footer";
 
 export default component$(() => {
   return (
@@ -93,6 +94,7 @@ export default component$(() => {
           </Infobox>
         </div>
       </div>
+      <SecondaryFooter />
     </>
   );
 });

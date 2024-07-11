@@ -51,7 +51,7 @@ export default component$(() => {
                 <p class={signoutstyles.name}>{session.value?.user?.name}</p>
                 <p class={signoutstyles.email}>{session.value?.user?.email}</p>
                 <Form action={signOut}>
-                  <input type="hidden" name="callbackUrl" value="/" />
+                  <input type="hidden" name="callbackUrl" value="/auth/signoutsuccess" />
                   <button class="button button-signout">Sign Out</button>
                 </Form>
             </div>

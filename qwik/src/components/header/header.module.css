@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 150px;
+  backdrop-filter: blur(30px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {

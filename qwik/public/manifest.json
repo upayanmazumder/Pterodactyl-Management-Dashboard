@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
+  "name": "pterodactyl-management-dashboard",
+  "short_name": "PMD",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A Qwik project app."
+  "background_color": "#163f62",
+  "description": "Pterodactyl Management Dashboard"
 }

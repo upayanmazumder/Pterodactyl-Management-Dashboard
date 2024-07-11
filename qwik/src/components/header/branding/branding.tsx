@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import Icon from "../../../media/icon.png?jsx";
+import Icon from '../../../media/icon.png?jsx';
 import brandingstyles from "./branding.module.css";
 
 export default component$(() => {

@@ -46,7 +46,7 @@ export default component$(() => {
     <>
         <h3> You are already logged in!</h3>
         <div class={signoutstyles.wrapper}>
-            <img class={signoutstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name  ?? 'User Icon'} />
+            <img class={signoutstyles.pfp} src={imageUrl} alt={session.value?.user?.name  ?? 'User Icon'} />
             <div class={signoutstyles.details}>
                 <p class={signoutstyles.name}>{session.value?.user?.name}</p>
                 <p class={signoutstyles.email}>{session.value?.user?.email}</p>

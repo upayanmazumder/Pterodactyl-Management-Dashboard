@@ -19,7 +19,12 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
-  border: 2px solid #fff;
+  border: 10px solid transparent;
+  transition: border 0.2s ease;
+}
+
+.pfp:hover {
+  border: 10px solid #ffffff24;
 }
 
 .details {

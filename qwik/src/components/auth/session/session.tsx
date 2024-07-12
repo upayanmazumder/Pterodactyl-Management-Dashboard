@@ -59,7 +59,7 @@ export default component$(() => {
   return (
     <>
         <div class={sessionstyles.wrapper}>
-            <img class={sessionstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name  ?? 'User Icon'} />
+            <a href="/profile"><img class={sessionstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name  ?? 'User Icon'} /></a>
             <div class={sessionstyles.details}>
                 <p class={sessionstyles.name}>{session.value?.user?.name}</p>
                 <p class={sessionstyles.email}>{session.value?.user?.email}</p>

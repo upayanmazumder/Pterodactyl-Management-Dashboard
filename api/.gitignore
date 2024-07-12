@@ -1,6 +1,5 @@
 .env
 node_modules
 firebase/serviceaccountkey.json
-testapi.js
 logs
 ssl

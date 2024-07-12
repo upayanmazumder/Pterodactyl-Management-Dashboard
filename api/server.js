@@ -8,10 +8,8 @@ const fs = require('fs');
 
 const app = express();
 
-// Load environment variables from .env file
 dotenv.config();
 
-// Access the API_PORT environment variable
 const port = process.env.API_PORT || 3000;
 
 const serviceAccount = require('./firebase/serviceaccountkey.json');
@@ -21,7 +19,6 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
-// Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
 // Import routes

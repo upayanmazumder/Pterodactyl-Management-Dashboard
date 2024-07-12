@@ -33,6 +33,7 @@
     "@builder.io/qwik": "^1.7.0",
     "@builder.io/qwik-auth": "0.2.2",
     "@builder.io/qwik-city": "^1.7.0",
+    "@qwikest/icons": "^0.0.13",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
@@ -45,6 +46,7 @@
     "vite": "^5.2.10",
     "vite-tsconfig-paths": "^4.2.1",
     "wrangler": "^3.0.0",
-    "@qwikest/icons": "^0.0.13"
+    "@modular-forms/qwik": "^0.26.1",
+    "valibot": "^0.36.0"
   }
 }

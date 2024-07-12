@@ -7,15 +7,32 @@ const db = admin.firestore();
 
 router.post('/addUser', async (req, res) => {
   try {
-    const { username, email, serversOwned, friendsEmails } = req.body;
+    const { username, firstName, lastName, email, serversOwned, friendsEmails, pterodactylPassword } = req.body;
     const userRef = db.collection('users').doc(email);
 
-    await userRef.set({
+    const userData = {
       username,
+      firstName,
+      lastName,
       email,
       serversOwned,
       friendsEmails
-    });
+    };
+
+    // Check if pterodactylPassword already exists in the document
+    const doc = await userRef.get();
+    if (doc.exists) {
+      const existingData = doc.data();
+      // Only update pterodactylPassword if it doesn't already exist
+      if (!existingData.pterodactylPassword) {
+        userData.pterodactylPassword = pterodactylPassword;
+      }
+    } else {
+      // Document doesn't exist, set pterodactylPassword
+      userData.pterodactylPassword = pterodactylPassword;
+    }
+
+    await userRef.set(userData, { merge: true });
 
     logger.info(`User data added successfully for email: ${email}`);
     res.status(200).send('User data added successfully');

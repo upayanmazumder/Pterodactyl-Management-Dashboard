@@ -1,12 +1,8 @@
-import { component$, Slot, useStyles$ } from "@builder.io/qwik";
+import { component$, Slot } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
-import Header from "../components/header/header";
-import Breadcrumb from "../components/breadcrumb/breadcrumb"
-import Footer from "../components/footer/footer";
-
-import styles from "./styles.css?inline";
+import SecondaryFooter from "../../components/secondary-footer/secondary-footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -26,15 +22,12 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 export default component$(() => {
-  useStyles$(styles);
   return (
     <>
-      <Header />
-      <Breadcrumb />
       <main>
         <Slot />
       </main>
-      <Footer />
+      <SecondaryFooter/>
     </>
   );
 });

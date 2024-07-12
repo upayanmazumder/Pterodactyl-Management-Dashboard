@@ -33,12 +33,10 @@
   transition: color var(--transition-duration);
 }
 
-.menuItem:hover,
 .link:hover {
   color: var(--text-hover-color);
 }
 
-.menuItem::after,
 .link::after {
   content: '';
   position: absolute;
@@ -50,7 +48,6 @@
   transition: width var(--transition-duration);
 }
 
-.menuItem:hover::after,
 .link:hover::after {
   width: 100%;
 }

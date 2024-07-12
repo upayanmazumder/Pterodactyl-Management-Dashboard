@@ -3,9 +3,21 @@
     justify-content: center;
     display: flex;
     gap: 25px;
-    background-color: rgba(71, 67, 67, 0.614);
+    background-color: rgba(35, 113, 197, 0.311);
     padding: 20px 30px;
     width: fit-content;
-    margin: 5px auto;
+    margin: 15px auto;
     border-radius: 10px;
+    text-align: center;
+}
+
+.wrapper form {
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.wrapper form:hover {
+    background-color: rgba(62, 62, 62, 0.722);
 }

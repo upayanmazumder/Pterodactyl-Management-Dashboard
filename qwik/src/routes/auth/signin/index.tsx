@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import SignUpForm from "../../../components/auth/signin"
+import SignUpForm from "../../../components/auth/signin/signin"
 
 export default component$(() => {
   return (

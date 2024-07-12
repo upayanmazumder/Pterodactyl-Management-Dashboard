@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const admin = require('firebase-admin');
-const logger = require('../logger');
+const logger = require('../../logger');
 
 const db = admin.firestore();
 
-router.get('/getUser/:email', async (req, res) => {
+router.get('/user/getUser/:email', async (req, res) => {
   try {
     const email = req.params.email;
     const userRef = db.collection('users').doc(email);

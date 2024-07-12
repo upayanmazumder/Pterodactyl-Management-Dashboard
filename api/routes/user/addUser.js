@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const admin = require('firebase-admin');
-const logger = require('../logger');
+const logger = require('../../logger');
 
 const db = admin.firestore();
 
-router.post('/addUser', async (req, res) => {
+router.post('/user/addUser', async (req, res) => {
   try {
     const { username, firstName, lastName, email, serversOwned, friendsEmails, pterodactylPassword } = req.body;
     const userRef = db.collection('users').doc(email);

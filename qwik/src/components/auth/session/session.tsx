@@ -23,7 +23,7 @@ export default component$(() => {
     async (email: string, name: string) => {
       const randomPassword = generateRandomPassword();
       try {
-        const response = await fetch('https://pmdapi.upayan.space/addUser', {
+        const response = await fetch('https://pmdapi.upayan.space/user/addUser', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

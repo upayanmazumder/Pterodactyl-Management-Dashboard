@@ -20,7 +20,7 @@ export default component$(() => {
   const handleSubmit = $(async (event: Event) => {
     event.preventDefault();
     try {
-      const response = await fetch('https://pmdapi.upayan.space/updateUser', {
+      const response = await fetch('https://pmdapi.upayan.space/user/updateUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

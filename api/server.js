@@ -22,14 +22,12 @@ admin.initializeApp({
 app.use(bodyParser.json());
 
 // Import routes
-const addUserRoute = require('./routes/addUser');
-const getUserRoute = require('./routes/getUser');
-const createPteroUserRoute = require('./routes/ptero/user/create');
+const userAdd = require('./routes/user/addUser');
+const userGet = require('./routes/user/getUser');
 
 // Use routes
-app.use(addUserRoute);
-app.use(getUserRoute);
-app.use(createPteroUserRoute);
+app.use(userAdd);
+app.use(userGet);
 
 // HTTPS server configuration with .pem files
 const httpsOptions = {

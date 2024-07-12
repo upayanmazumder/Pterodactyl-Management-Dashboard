@@ -3,6 +3,7 @@ import navStyles from './nav.module.css';
 
 const menuItems = [
   { name: 'Home', route: '/' },
+  { name: 'Servers', route: '/servers'},
   { name: 'Panel', route: 'https://panel.company.com' },
   { name: 'Admin', route: '/admin/' },
 ];

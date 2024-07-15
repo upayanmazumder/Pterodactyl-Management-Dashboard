@@ -3,16 +3,11 @@ import Session from "../auth/session/session";
 import Icon from '../../media/icon.png?jsx';
 import headerstyles from "./header.module.css";
 import { useLocation } from "@builder.io/qwik-city";
-
-const menuItems = [
-  { name: 'Home', route: '/' },
-  { name: 'Servers', route: '/servers' },
-  { name: 'Panel', route: 'https://panel.company.com' },
-  { name: 'Admin', route: '/admin/' },
-];
+import config from '../../data/config.json';
 
 export default component$(() => {
   const loc = useLocation();
+  const menuItems = config.menuItems;
 
   // Function to generate the breadcrumb text
   const generateBreadcrumb = (pathname: string) => {
@@ -23,7 +18,6 @@ export default component$(() => {
     } else if (pathname === "/terms-of-service/") {
       return "> Terms of Service";
     } else {
-      // Remove leading and trailing slashes, split by "/", and join with " > "
       const segments = pathname.replace(/^\/|\/$/g, '').split('/');
       return ` > ${segments.join(' > ')}`;
     }

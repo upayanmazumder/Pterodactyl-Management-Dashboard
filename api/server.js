@@ -5,6 +5,7 @@ const logger = require('./logger');
 const dotenv = require('dotenv');
 const https = require('https');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 
@@ -20,6 +21,18 @@ admin.initializeApp({
 });
 
 app.use(bodyParser.json());
+
+// Set up CORS
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:4173', 'https://pmd.upayan.space'];
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 // Import routes
 const userAdd = require('./routes/user/addUser');

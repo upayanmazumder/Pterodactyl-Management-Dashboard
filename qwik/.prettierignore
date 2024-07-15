@@ -37,3 +37,6 @@ yarn.lock
 server
 
 # Firebase
+
+# AWS-lambda
+.serverless

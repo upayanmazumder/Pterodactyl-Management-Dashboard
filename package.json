@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/upayanmazumder/pterodactyl-management-dashboard/issues"
   },
-  "homepage": "https://github.com/upayanmazumder/pterodactyl-management-dashboard#readme"
+  "homepage": "https://github.com/upayanmazumder/pterodactyl-management-dashboard#readme",
+  "dependencies": {
+    "serverless": "^4.1.12"
+  }
 }

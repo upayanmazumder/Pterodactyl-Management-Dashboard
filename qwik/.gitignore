@@ -46,3 +46,6 @@ functions/**/*.js
 # Firebase
 functions/server
 functions/node_modules
+
+# AWS-lambda
+.serverless

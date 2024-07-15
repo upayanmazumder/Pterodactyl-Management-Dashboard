@@ -1,18 +1,19 @@
 .header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 150px;
-  backdrop-filter: blur(30px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  padding: 10px 10%;
 }
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    padding: 8px 10px;
-  }
+.header .top {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.header .bottom {
+  display: flex;
+  text-align: left;
+  margin-left: 10;
 }

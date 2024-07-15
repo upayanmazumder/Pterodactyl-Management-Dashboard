@@ -23,7 +23,6 @@
   padding: 0;
 }
 
-.menuItem,
 .link {
   position: relative;
   display: block;
@@ -66,12 +65,6 @@
   transform: translateY(10px);
   transition: opacity var(--transition-duration), visibility var(--transition-duration), transform var(--transition-duration);
   z-index: var(--z-index);
-}
-
-.menuItem:hover .subMenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 
 .subMenuItem {

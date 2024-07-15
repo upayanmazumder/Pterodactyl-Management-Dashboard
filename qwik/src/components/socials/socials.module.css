@@ -1,31 +1,27 @@
 .socialIcons {
     display: flex;
-    gap: 10px;
-    background-color: hsla(0, 0%, 82%, 0.085);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    width: fit-content;
-    padding: 5px;
-    border-radius: 25px;
-    align-items: center;
+    justify-content: center;
+    background-color: rgba(88, 88, 88, 0.523);
+    border-radius: 1.4rem;
 }
 
 .iconLink {
-    display: flex;
-    justify-content: center; 
+    display: inline-flex;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    padding: 5px;
+    margin: 0 8px;
     border-radius: 50%;
-    color: white;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.iconLink:hover {
-    background-color: rgba(112, 112, 112, 0.7);
+    background-color: transparent;
+    transition: background-color 0.1s ease, transform 0.3s ease;
+    overflow: hidden;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    font-size: 24px;
+    color: #efefefa3;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color:rgb(255, 255, 255);
 }

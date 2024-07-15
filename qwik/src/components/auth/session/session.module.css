@@ -6,6 +6,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
+  border: white 1.6px solid;
 }
 
 .wrapper:hover {
@@ -14,13 +15,17 @@
 }
 
 .pfp {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
   border: 10px solid transparent;
   transition: border 0.2s ease;
+}
+
+.pfp img {
+  width: 100%;
 }
 
 .pfp:hover {

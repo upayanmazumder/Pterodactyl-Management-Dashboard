@@ -10,7 +10,7 @@ export const Footer = component$(() => {
   return (
     <footer class={styles.footer}>
       <p class={styles.anchor}>
-        <span>&copy; {config.footerTexts[0].copyright}</span>
+        <span>{config.footerTexts[0].copyright}</span>
       </p>
       <p class={styles.version}>v{store.version}</p>
       <p class={styles.disclaimer}>

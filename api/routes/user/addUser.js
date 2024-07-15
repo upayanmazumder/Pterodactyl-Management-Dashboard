@@ -7,7 +7,10 @@ const db = admin.firestore();
 
 router.post('/user/addUser', async (req, res) => {
   try {
-    const { username, firstName, lastName, email, serversOwned, friendsEmails, pterodactylPassword } = req.body;
+    let { username, firstName, lastName, email, serversOwned, friendsEmails, pterodactylPassword } = req.body;
+
+    username = username.replace(/[^a-zA-Z0-9]/g, '');
+
     const userRef = db.collection('users').doc(email);
 
     const userData = {

@@ -8,5 +8,14 @@
     "remotePath": "/",
     "uploadOnSave": false,
     "useTempFile": false,
-    "openSsh": false
+    "openSsh": false,
+    "ignore": [
+        ".vscode",
+        ".git",
+        ".DS_Store",
+        "node_modules",
+        "qwik",
+        "api/node_modules",
+        "api/logs"
+    ]
 }

@@ -6,19 +6,35 @@ import { useLocation } from "@builder.io/qwik-city";
 
 const menuItems = [
   { name: 'Home', route: '/' },
-  { name: 'Servers', route: '/servers'},
+  { name: 'Servers', route: '/servers' },
   { name: 'Panel', route: 'https://panel.company.com' },
   { name: 'Admin', route: '/admin/' },
 ];
 
 export default component$(() => {
   const loc = useLocation();
+
+  // Function to generate the breadcrumb text
+  const generateBreadcrumb = (pathname: string) => {
+    if (pathname === "/") {
+      return "> Home";
+    } else if (pathname === "/privacy-policy/") {
+      return "> Privacy Policy";
+    } else if (pathname === "/terms-of-service/") {
+      return "> Terms of Service";
+    } else {
+      // Remove leading and trailing slashes, split by "/", and join with " > "
+      const segments = pathname.replace(/^\/|\/$/g, '').split('/');
+      return ` > ${segments.join(' > ')}`;
+    }
+  };
+
   return (
     <header class={headerstyles.header}>
       <div class={headerstyles.top}>
         <div class={headerstyles.branding}>
           <div class={headerstyles.logo}>
-              <Icon/>
+              <Icon />
           </div>
           <h2 class={headerstyles.text}>
             Pterodactyl Management Dashboard
@@ -27,18 +43,18 @@ export default component$(() => {
         <nav class={headerstyles.navMenu}>
           <ul class={headerstyles.mainMenu}>
             {menuItems.map((item, index) => (
-                <a key={index} href={item.route} class={headerstyles.link}>
-                  {item.name}
-                </a>
+              <a key={index} href={item.route} class={headerstyles.link}>
+                {item.name}
+              </a>
             ))}
           </ul>
         </nav>
-        <Session/>
+        <Session />
       </div>
       <div class={headerstyles.bottom}>
         <div class={headerstyles.wrapper}>
           {loc.isNavigating && <p>Loading...</p>}
-          <p class={headerstyles.pathname}>{loc.url.pathname}</p>
+          <p class={headerstyles.pathname}>{generateBreadcrumb(loc.url.pathname)}</p>
         </div>
       </div>
     </header>

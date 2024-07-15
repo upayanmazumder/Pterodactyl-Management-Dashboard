@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable qwik/jsx-img */
-import { component$, $, useTask$ } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import { useAuthSession } from '~/routes/plugin@auth';
 import updateStyles from "./update.module.css";
-import { Form } from '@builder.io/qwik-city';
-
 export default component$(() => {
   const session = useAuthSession();
 

@@ -4,94 +4,58 @@ import styles from "./secondary-footer.module.css";
 import { LuBuilding, LuFolderKanban, LuLayers } from "@qwikest/icons/lucide";
 import Socials from "../socials/socials";
 
+// Importing your config.json data
+import config from "../../data/config.json";
+
 export default component$(() => {
   return (
     <div class={styles.secondaryFooter}>
-      {/*KSP-C Section */}
+      {/* Company Section */}
       <div class={styles.column}>
         <a class={styles.columnheading}>
-        <LuBuilding /> Company
+          <LuBuilding /> Company
         </a>
         <ul class={styles.columnlinks}>
-          <li>
-            <a
-              href="/terms-of-service"
-              >
-              Terms of Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="/privacy-policy"
-              >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="/feedback"
-              >
-              Feedback
-            </a>
-          </li>
-          <li>
-            <a href="mailto:support@company.com">
-              Contact us
-            </a>
-          </li>
+          {/* Mapping over config.menuItems.Company */}
+          {config.secondaryFooterLinks.Company.map((item, index) => (
+            <li key={index}>
+              <a href={item.route}>{item.name}</a>
+            </li>
+          ))}
         </ul>
       </div>
 
-      {/*Products Section */}
+      {/* Products Section */}
       <div class={styles.column}>
         <a class={styles.columnheading}>
           <LuFolderKanban /> Products
         </a>
         <ul class={styles.columnlinks}>
-          <li>
-            <a
-              href="https://company.com/product1"
-              target="_blank"
-              >
-              Product 1
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://company.com/product2"
-              target="_blank"
-              >
-              Product 2
-            </a>
-          </li>
+          {/* Mapping over config.secondaryFooterLinks.Products */}
+          {config.secondaryFooterLinks.Products.map((item, index) => (
+            <li key={index}>
+              <a href={item.route} target="_blank">{item.name}</a>
+            </li>
+          ))}
         </ul>
       </div>
 
-      {/*Resources Section */}
+      {/* Resources Section */}
       <div class={styles.column}>
         <a class={styles.columnheading}>
           <LuLayers /> Resources
         </a>
         <ul class={styles.columnlinks}>
-          <li>
-            <a
-              href="https://status.company.com"
-              target="_blank"
-              >
-              Status page
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/company/company.com"
-              target="_blank"
-              >
-              Open Source
-            </a>
-          </li>
+          {/* Mapping over config.secondaryFooterLinks.Resources */}
+          {config.secondaryFooterLinks.Resources.map((item, index) => (
+            <li key={index}>
+              <a href={item.route} target="_blank">{item.name}</a>
+            </li>
+          ))}
         </ul>
       </div>
 
+      {/* Socials Section */}
       <div class={styles.column}>
         <Socials />
       </div>

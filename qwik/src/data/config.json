@@ -1,9 +1,29 @@
 {
     "menuItems": [
-      { "name": "Home", "route": "/" },
-      { "name": "Servers", "route": "/servers" },
-      { "name": "Panel", "route": "https://panel.company.com" },
-      { "name": "Admin", "route": "/admin/" }
+        { "name": "Home", "route": "/" },
+        { "name": "Servers", "route": "/servers" },
+        { "name": "Panel", "route": "https://panel.company.com" },
+        { "name": "Admin", "route": "/admin/" }
+    ],
+    "secondaryFooterLinks": {
+        "Company": [
+            { "name": "Terms of Service", "route": "/tos" },
+            { "name": "Privacy Policy", "route": "/pp" },
+            { "name": "Feedback", "route": "/feedback" },
+            { "name": "Contact", "route": "mailto:contact@company.com" }
+        ],
+        "Products": [
+            { "name": "Product 1", "route": "/product1" },
+            { "name": "Product 2", "route": "/product2" }
+        ],
+        "Resources": [
+            { "name": "Status Page", "route": "/status" },
+            { "name": "GitHub Repo", "route": "https://github.com/company/repo" }
+        ]
+    },
+    "socialLinks": [
+        { "name": "Discord", "route": "discord.com" },
+        { "name": "Instagram", "route": "instagram.com" },
+        { "name": "Youtube", "route": "youtube.com" }
     ]
-  }
-  
+}

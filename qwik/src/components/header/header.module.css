@@ -28,6 +28,7 @@
 .logo img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .text {
@@ -40,6 +41,7 @@
   display: flex;
   align-items: center;
   background-color: #b0c4de30;
+  border-radius: 8px;
 }
 
 .mainMenu {
@@ -78,9 +80,14 @@
 
 .pathname {
   margin-left: 50px;
-  color: gray;
-  background: linear-gradient(to right, #1a73e8, #1a73e8b6 , rgba(48, 48, 48, 0.091));
-  padding: 2px 2rem 2px 5px
+  color: rgb(164, 164, 164);
+  background: linear-gradient(to right, #343434, #5a5a5aae , rgba(48, 48, 48, 0.091));
+  padding: 2px 2rem 2px 5px;
+  border-radius: 3px;
+}
+
+.pathname:hover {
+  cursor:default;
 }
 
 @media (max-width: 768px) {

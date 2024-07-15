@@ -4,7 +4,9 @@
   "description": "A dashboard for the pterodactyl game panel",
   "main": "NULL",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd qwik && npm run dev",
+    "api": "cd api && node ."
   },
   "repository": {
     "type": "git",

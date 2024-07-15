@@ -40,7 +40,7 @@ export default component$(() => {
         });
 
         if (response.ok) {
-          console.log('User created successfully');
+          console.log('User synced successfully');
         } else {
           console.error('Failed to create user');
         }
@@ -75,7 +75,6 @@ export default component$(() => {
         <a href="/profile"><img class={sessionstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name ?? 'User Icon'} /></a>
         <div class={sessionstyles.details}>
           <p class={sessionstyles.name}>{session.value?.user?.name}</p>
-          <p class={sessionstyles.email}>{session.value?.user?.email}</p>
           <Form action={signOut}>
             <input type="hidden" name="callbackUrl" value="/auth/signedout" />
             <button class="button button-signout">Sign Out</button>

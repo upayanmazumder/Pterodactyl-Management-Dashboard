@@ -9,7 +9,6 @@ export default component$(() => {
   const loc = useLocation();
   const menuItems = config.menuItems;
 
-  // Function to generate the breadcrumb text
   const generateBreadcrumb = (pathname: string) => {
     if (pathname === "/") {
       return "> Home";
@@ -28,7 +27,7 @@ export default component$(() => {
       <div class={headerstyles.top}>
         <div class={headerstyles.branding}>
           <div class={headerstyles.logo}>
-              <Icon />
+            <Icon />
           </div>
           <h2 class={headerstyles.text}>
             Pterodactyl Management Dashboard

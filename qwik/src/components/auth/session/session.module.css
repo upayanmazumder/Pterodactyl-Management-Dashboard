@@ -1,12 +1,13 @@
 .wrapper {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 10px 1rem;
   background: linear-gradient(135deg, #1e3a8a, var(--primary-color));
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   border: white 1.6px solid;
+  height: min-content;
 }
 
 .wrapper:hover {
@@ -39,16 +40,9 @@
 }
 
 .name {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
-  margin: 0;
-  transition: color 0.3s ease;
-}
-
-.email {
-  font-size: 1rem;
-  color: #d1d5db;
   margin: 0;
   transition: color 0.3s ease;
 }
@@ -70,10 +64,6 @@
   .name {
     font-size: 1.1rem;
   }
-
-  .email {
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -84,9 +74,5 @@
 
   .name {
     font-size: 1rem;
-  }
-
-  .email {
-    font-size: 0.85rem;
   }
 }

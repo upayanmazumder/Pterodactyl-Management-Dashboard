@@ -42,3 +42,7 @@ lerna-debug.log*
 
 # Cloudflare
 functions/**/*.js
+
+# Firebase
+functions/server
+functions/node_modules

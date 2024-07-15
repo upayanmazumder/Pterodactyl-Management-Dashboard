@@ -2,18 +2,19 @@
 import { component$, useStore } from "@builder.io/qwik";
 import styles from "./footer.module.css";
 import packageJson from '../../../../package.json';
+import config from '../../data/config.json';
 
 export const Footer = component$(() => {
   const store = useStore({ version: packageJson.version });
 
   return (
     <footer class={styles.footer}>
-      <a class={styles.anchor}>
-        <span>&copy; pmd.upayan.space {new Date().getFullYear()}</span>
-      </a>
+      <p class={styles.anchor}>
+        <span>&copy; {config.footerTexts[0].copyright}</span>
+      </p>
       <p class={styles.version}>v{store.version}</p>
       <p class={styles.disclaimer}>
-        Pterodactyl Management Dashboard is not affiliated/associated in any way with the Pterodactyl Project
+        {config.footerTexts[0].disclaimer}
       </p>
     </footer>
   );

@@ -25,5 +25,12 @@
         { "name": "Discord", "route": "https://discord.com/users/1240025366853193758" },
         { "name": "Instagram", "route": "https://instagram.com/_._upayan_._" },
         { "name": "Youtube", "route": "https://youtube.com" }
+    ],
+    "footerTexts": [
+        {
+            "copyright": "© pmd.upayan.space 2024",
+            "disclaimer": "Pterodactyl Management Dashboard is not affiliated/associated in any way with the Pterodactyl Project"
+        }
+          
     ]
 }

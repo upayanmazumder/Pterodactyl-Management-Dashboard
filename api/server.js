@@ -37,10 +37,12 @@ app.use(cors({
 // Import routes
 const userAdd = require('./routes/user/addUser');
 const userGet = require('./routes/user/getUser');
+const userUpdate = require('./routes/user/updateUser');
 
 // Use routes
 app.use(userAdd);
 app.use(userGet);
+app.use(userUpdate);
 
 // HTTPS server configuration with .pem files
 const httpsOptions = {

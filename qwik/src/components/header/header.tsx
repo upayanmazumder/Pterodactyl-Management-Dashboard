@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import Session from "../auth/session/session";
 import Icon from '../../media/icon.png?jsx';
+import APIStatus from "../../components/api/api"
 import headerstyles from "./header.module.css";
 import { useLocation } from "@builder.io/qwik-city";
 import config from '../../data/config.json';
@@ -25,6 +26,7 @@ export default component$(() => {
   return (
     <header class={headerstyles.header}>
       <div class={headerstyles.top}>
+        <APIStatus />
         <div class={headerstyles.branding}>
           <div class={headerstyles.logo}>
             <Icon />

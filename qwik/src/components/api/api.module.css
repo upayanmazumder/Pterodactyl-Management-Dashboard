@@ -1,0 +1,37 @@
+.statusIndicator {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: red;
+}
+
+.checking {
+    background-color: grey;
+}
+
+.info {
+    display: none;
+    position: absolute;
+    text-wrap: nowrap;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.395);
+    padding: 5px;
+    border-radius: 4px;
+    color: black;
+    font-size: 0.7rem;
+}
+
+.statusIndicator:hover .info {
+    display: block;
+}

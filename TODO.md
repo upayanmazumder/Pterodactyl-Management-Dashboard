@@ -2,24 +2,25 @@
 
 ## Frontend
 - [ ] Implement homepage layout
-- [ ] Develop navigation bar
+- [x] Develop navigation bar
 - [ ] Create responsive design for mobile devices
 - [ ] Integrate authentication using authjs
-  - [ ] Setup login with Discord
-  - [ ] Setup login with GitHub
-  - [ ] Setup login with Google
-  - [ ] Link accounts with the same email across different apps
+  - [x] Setup login with Discord
+  - [x] Setup login with GitHub
+  - [x] Setup login with Google
+  - [x] Link accounts with the same email across different apps
 - [ ] Fetch and display data from API endpoint at `https://pmdapi.eranodes.com/`
 - [ ] Add timezone support
+- [ ] Timeout for API Status Component
 
 ## Backend
-- [ ] Set up API endpoint at `https://pmdapi.eranodes.com/`
+- [x] Set up API endpoint at `https://pmdapi.eranodes.com/`
 - [ ] Configure database
   - [ ] Create necessary tables and relationships
   - [ ] Seed initial data
 - [ ] Implement authentication logic
-  - [ ] OAuth with Discord, GitHub, and Google
-  - [ ] Link accounts with the same email
+  - [x] OAuth with Discord, GitHub, and Google
+  - [x] Link accounts with the same email
 - [ ] Create endpoints for CRUD operations
   - [ ] Create
   - [ ] Read
@@ -33,9 +34,9 @@
 
 ## General
 - [ ] Write project documentation
-  - [ ] README
+  - [x] README
   - [ ] CONTRIBUTING
-  - [ ] LICENSE
+  - [x] LICENSE
   - [ ] Code of Conduct
 - [ ] Set up CI/CD pipeline
 - [ ] Monitor performance and error tracking

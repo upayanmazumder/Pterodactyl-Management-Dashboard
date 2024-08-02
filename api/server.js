@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const https = require('https');
 const fs = require('fs');
 const cors = require('cors');
+const os = require('os');
 
 const app = express();
 
@@ -43,6 +44,17 @@ const userUpdate = require('./routes/user/updateUser');
 app.use(userAdd);
 app.use(userGet);
 app.use(userUpdate);
+
+// Define a route for / to return server stats
+app.get('/', (req, res) => {
+  const uptime = process.uptime();
+  const ping = Math.round(os.loadavg()[0] * 100) / 100;
+  const stats = {
+    uptime: `${Math.floor(uptime / 60)} minutes`,
+    ping: `${ping} ms`
+  };
+  res.json(stats);
+});
 
 // HTTPS server configuration with .pem files
 const httpsOptions = {

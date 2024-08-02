@@ -3,6 +3,7 @@ import { component$, useSignal } from "@builder.io/qwik";
 import { Form, routeAction$ } from "@builder.io/qwik-city";
 import { useAuthSession } from "../../../routes/plugin@auth";
 import sessionstyles from "../../auth/session/session.module.css";
+import { API_BASE_URL, DEFAULT_HEADERS } from '../../../shared/api/api';
 
 interface UserUpdateResponse {
   error?: string;
@@ -13,11 +14,9 @@ export const usePostUpdateUserAction = routeAction$(async (props): Promise<UserU
   const { email, firstName, lastName, pterodactylPassword } = props;
 
   try {
-    const response = await fetch('https://pmdapi.upayan.space/user/updateUser', {
+    const response = await fetch(`${API_BASE_URL}/user/updateUser`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
       body: JSON.stringify({
         email,
         firstName,
@@ -57,7 +56,7 @@ export default component$(() => {
           <span class="highlight">Manage</span> your profile
         </h3>
         <h4>{session.value?.user?.name}</h4>
-        <p class={sessionstyles.email}>{userEmail}</p> {/* Use userEmail here */}
+        <p class={sessionstyles.email}>{userEmail}</p>
 
         <Form action={postUpdateUserAction} class={sessionstyles.form}>
           <input
@@ -100,8 +99,8 @@ export default component$(() => {
             Update Profile
           </button>
         </Form>
-        {postUpdateUserAction.value?.error && <p>{postUpdateUserAction.value.error}</p>}
-        {postUpdateUserAction.value?.success && <p>{postUpdateUserAction.value.success}</p>}
+        {postUpdateUserAction.value?.error && <p class="error">{postUpdateUserAction.value.error}</p>}
+        {postUpdateUserAction.value?.success && <p class="success">{postUpdateUserAction.value.success}</p>}
       </div>
     </>
   );

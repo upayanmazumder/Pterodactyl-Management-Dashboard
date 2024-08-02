@@ -5,6 +5,7 @@ import { useAuthSession } from '~/routes/plugin@auth';
 import sessionstyles from "./session.module.css";
 import { Form } from '@builder.io/qwik-city';
 import { useAuthSignout } from '~/routes/plugin@auth';
+import { API_BASE_URL, DEFAULT_HEADERS } from '../../../shared/api/api';
 
 const generateRandomPassword = () => {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -23,11 +24,9 @@ export default component$(() => {
     async (email: string, name: string) => {
       const randomPassword = generateRandomPassword();
       try {
-        const response = await fetch('https://pmdapi.upayan.space/user/addUser', {
+        const response = await fetch(`${API_BASE_URL}/user/addUser`, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: DEFAULT_HEADERS,
           body: JSON.stringify({
             username: name,
             firstName: '',

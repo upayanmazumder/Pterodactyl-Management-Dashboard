@@ -37,8 +37,8 @@ router.post('/user/addUser', async (req, res) => {
 
     await userRef.set(userData, { merge: true });
 
-    logger.info(`User data added successfully for email: ${email}`);
-    res.status(200).send('User data added successfully');
+    logger.info(`User data synced successfully for email: ${email}`);
+    res.status(200).send('User data synced successfully');
   } catch (error) {
     logger.error(`Error adding user data: ${error}`);
     console.error('Error adding user data: ', error);

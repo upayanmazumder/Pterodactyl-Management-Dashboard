@@ -38,12 +38,12 @@ app.use(cors({
 // Import routes
 const userAdd = require('./routes/user/addUser');
 const userGet = require('./routes/user/getUser');
-const userUpdate = require('./routes/user/updateUser');
+const userUpdateFullName = require('./routes/user/updateUserFullName');
 
 // Use routes
 app.use(userAdd);
 app.use(userGet);
-app.use(userUpdate);
+app.use(userUpdateFullName);
 
 // Define a route for / to return server stats
 app.get('/', (req, res) => {

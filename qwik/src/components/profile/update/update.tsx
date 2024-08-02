@@ -11,17 +11,16 @@ interface UserUpdateResponse {
 }
 
 export const usePostUpdateUserAction = routeAction$(async (props): Promise<UserUpdateResponse> => {
-  const { email, firstName, lastName, pterodactylPassword } = props;
+  const { email, firstName, lastName } = props;
 
   try {
-    const response = await fetch(`${API_BASE_URL}/user/updateUser`, {
+    const response = await fetch(`${API_BASE_URL}/user/updateUserFullName`, {
       method: 'POST',
       headers: DEFAULT_HEADERS,
       body: JSON.stringify({
         email,
         firstName,
-        lastName,
-        pterodactylPassword,
+        lastName
       }),
     });
 
@@ -40,7 +39,6 @@ export default component$(() => {
   const session = useAuthSession();
   const firstNameSignal = useSignal('');
   const lastNameSignal = useSignal('');
-  const pterodactylPasswordSignal = useSignal('');
 
   // Extract email from session value
   const userEmail = session.value?.user?.email || '';
@@ -77,15 +75,6 @@ export default component$(() => {
             class={sessionstyles.input}
             onChange$={(e) => (lastNameSignal.value = (e.target as HTMLInputElement).value)}
             value={lastNameSignal.value}
-          />
-          <br />
-          <input
-            type='password'
-            name='pterodactylPassword'
-            placeholder='Enter your Pterodactyl password'
-            class={sessionstyles.input}
-            onChange$={(e) => (pterodactylPasswordSignal.value = (e.target as HTMLInputElement).value)}
-            value={pterodactylPasswordSignal.value}
           />
           <br />
           <input

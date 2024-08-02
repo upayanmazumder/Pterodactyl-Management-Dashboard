@@ -12,6 +12,7 @@ footer {
   text-align: center;
   text-decoration: none;
   line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .anchor span:not(.spacer) {
@@ -19,19 +20,15 @@ footer {
 }
 
 .version {
-  font-size: smaller;
+  font-size: 0.6rem;
   color: rgb(148, 148, 148);
+  margin-top: 0;
 }
 
 .disclaimer {
   color: rgb(145, 145, 145) !important;
   font-size: small;
   text-align: center;
-}
-
-.spacer {
-  display: none;
-  padding: 0 15px;
 }
 
 @media screen and (min-width: 768px) {

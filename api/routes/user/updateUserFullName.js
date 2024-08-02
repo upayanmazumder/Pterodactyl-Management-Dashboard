@@ -5,7 +5,7 @@ const logger = require('../../logger');
 
 const db = admin.firestore();
 
-router.post('/user/updateUser', async (req, res) => {
+router.post('/user/updateUserFullName', async (req, res) => {
   try {
     const { email, firstName, lastName, pterodactylPassword } = req.body;
     const userRef = db.collection('users').doc(email);
@@ -13,8 +13,7 @@ router.post('/user/updateUser', async (req, res) => {
     // Update user data with new fields
     await userRef.update({
       firstName,
-      lastName,
-      pterodactylPassword
+      lastName
     });
 
     logger.info(`User data updated successfully for email: ${email}`);

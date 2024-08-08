@@ -17,8 +17,8 @@
             { "name": "Product 2", "route": "/product2" }
         ],
         "Resources": [
-            { "name": "Status Page", "route": "https://status.example.com" },
-            { "name": "GitHub Repo", "route": "https://github.com/company/repo" }
+            { "name": "Status Page", "route": "https://status.upayan.space" },
+            { "name": "GitHub Repo", "route": "https://github.com/upayanmazumder/Pterodactyl-Management-Dashboard" }
         ]
     },
     "socialLinks": [

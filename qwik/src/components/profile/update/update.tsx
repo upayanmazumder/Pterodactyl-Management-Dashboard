@@ -3,7 +3,7 @@ import { component$, useSignal } from "@builder.io/qwik";
 import { Form, routeAction$ } from "@builder.io/qwik-city";
 import { useAuthSession } from "../../../routes/plugin@auth";
 import sessionstyles from "../../auth/session/session.module.css";
-import { API_BASE_URL, DEFAULT_HEADERS } from '../../../shared/api/api';
+import { getApiBaseUrl, getDefaultHeaders } from '../../../shared/api/api';
 
 interface UserUpdateResponse {
   error?: string;
@@ -13,24 +13,33 @@ interface UserUpdateResponse {
 export const usePostUpdateUserAction = routeAction$(async (props): Promise<UserUpdateResponse> => {
   const { email, firstName, lastName } = props;
 
+  const apiUrl = `${getApiBaseUrl()}/user/updateUserFullName`;
+  const headers = getDefaultHeaders();
+
+  console.log('Updating user with details:');
+  console.log('API URL:', apiUrl);
+  console.log('Request headers:', headers);
+  console.log('Request body:', { email, firstName, lastName });
+
   try {
-    const response = await fetch(`${API_BASE_URL}/user/updateUserFullName`, {
+    const response = await fetch(apiUrl, {
       method: 'POST',
-      headers: DEFAULT_HEADERS,
-      body: JSON.stringify({
-        email,
-        firstName,
-        lastName
-      }),
+      headers: headers,
+      body: JSON.stringify({ email, firstName, lastName }),
     });
+
+    console.log('API response status:', response.status);
 
     const data = await response.json();
     if (!data.error) {
+      console.log('User update response:', data);
       return { success: 'User data updated successfully!' };
     } else {
+      console.error('User update error response:', data.error);
       return { error: data.error };
     }
   } catch (error) {
+    console.error('Error updating user data:', error);
     return { error: 'Error updating user data' };
   }
 });
@@ -42,6 +51,7 @@ export default component$(() => {
 
   // Extract email from session value
   const userEmail = session.value?.user?.email || '';
+  console.log('User email:', userEmail);
 
   const postUpdateUserAction = usePostUpdateUserAction();
   
@@ -63,7 +73,11 @@ export default component$(() => {
             placeholder='Enter your first name'
             required
             class={sessionstyles.input}
-            onChange$={(e) => (firstNameSignal.value = (e.target as HTMLInputElement).value)}
+            onChange$={(e) => {
+              const value = (e.target as HTMLInputElement).value;
+              console.log('First name changed:', value);
+              firstNameSignal.value = value;
+            }}
             value={firstNameSignal.value}
           />
           <br />
@@ -73,7 +87,11 @@ export default component$(() => {
             placeholder='Enter your last name'
             required
             class={sessionstyles.input}
-            onChange$={(e) => (lastNameSignal.value = (e.target as HTMLInputElement).value)}
+            onChange$={(e) => {
+              const value = (e.target as HTMLInputElement).value;
+              console.log('Last name changed:', value);
+              lastNameSignal.value = value;
+            }}
             value={lastNameSignal.value}
           />
           <br />
@@ -84,7 +102,8 @@ export default component$(() => {
           />
           <button
             type='submit'
-            class={sessionstyles.submit}>
+            class={sessionstyles.submit}
+            onClick$={() => console.log('Profile update form submitted')}>
             Update Profile
           </button>
         </Form>

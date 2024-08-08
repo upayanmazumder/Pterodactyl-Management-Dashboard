@@ -1,6 +1,6 @@
 /* eslint-disable qwik/loader-location */
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
-import { API_BASE_URL, DEFAULT_HEADERS } from '../../shared/api/api';
+import { getApiBaseUrl, getDefaultHeaders } from '../../shared/api/api';
 import styles from './api.module.css';
 
 interface ApiResponse {
@@ -14,9 +14,16 @@ export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
     const timeout = 5000; // 5 seconds
-    const fetchPromise = fetch(`${API_BASE_URL}/`, {
+    const apiUrl = getApiBaseUrl();
+    const headers = getDefaultHeaders();
+
+    // Log the API request details
+    console.log('Fetching API at:', apiUrl);
+    console.log('Request headers:', headers);
+
+    const fetchPromise = fetch(`${apiUrl}/`, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: headers,
     });
 
     const timerPromise = new Promise((_, reject) => 
@@ -25,7 +32,11 @@ export default component$(() => {
 
     try {
       const response = await Promise.race([fetchPromise, timerPromise]) as Response;
+      console.log('API response status:', response.status);
+      
       const data: ApiResponse = await response.json();
+      console.log('API response data:', data);
+
       if (data.uptime) {
         apiStatus.value = 'Online';
         uptime.value = data.uptime;
@@ -34,6 +45,7 @@ export default component$(() => {
         uptime.value = '';
       }
     } catch (error) {
+      console.error('API request failed:', error);
       apiStatus.value = 'Offline';
       uptime.value = '';
     }

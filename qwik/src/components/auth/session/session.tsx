@@ -5,7 +5,7 @@ import { useAuthSession } from '~/routes/plugin@auth';
 import sessionstyles from "./session.module.css";
 import { Form } from '@builder.io/qwik-city';
 import { useAuthSignout } from '~/routes/plugin@auth';
-import { API_BASE_URL, DEFAULT_HEADERS } from '../../../shared/api/api';
+import { getApiBaseUrl, getDefaultHeaders } from '../../../shared/api/api';
 
 const generateRandomPassword = () => {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -23,10 +23,26 @@ export default component$(() => {
   const createUser = $(
     async (email: string, name: string) => {
       const randomPassword = generateRandomPassword();
+      const apiUrl = `${getApiBaseUrl()}/user/addUser`;
+      const headers = getDefaultHeaders();
+      
+      console.log('Creating user with details:');
+      console.log('API URL:', apiUrl);
+      console.log('Request headers:', headers);
+      console.log('Request body:', {
+        username: name,
+        firstName: '',
+        lastName: '',
+        pterodactylPassword: randomPassword,
+        email: email,
+        serversOwned: [],
+        friendsEmails: []
+      });
+
       try {
-        const response = await fetch(`${API_BASE_URL}/user/addUser`, {
+        const response = await fetch(apiUrl, {
           method: 'POST',
-          headers: DEFAULT_HEADERS,
+          headers: headers,
           body: JSON.stringify({
             username: name,
             firstName: '',
@@ -38,6 +54,8 @@ export default component$(() => {
           })
         });
 
+        console.log('API response status:', response.status);
+        
         if (response.ok) {
           console.log('User synced successfully');
         } else {
@@ -71,7 +89,9 @@ export default component$(() => {
   return (
     <>
       <div class={sessionstyles.wrapper}>
-        <a href="/profile"><img class={sessionstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name ?? 'User Icon'} /></a>
+        <a href="/profile">
+          <img class={sessionstyles.pfp} loading="lazy" src={imageUrl} alt={session.value?.user?.name ?? 'User Icon'} />
+        </a>
         <div class={sessionstyles.details}>
           <p class={sessionstyles.name}>{session.value?.user?.name}</p>
           <Form action={signOut}>
